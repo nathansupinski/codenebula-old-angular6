@@ -14,7 +14,6 @@ steps:
     npm install
     ng build --prod
     npm testbackend
-   displayName: 'npm install and build'
 
 - task: PublishTestResults@2
   inputs:

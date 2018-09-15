@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/codenebula-net/CodeNebula/_apis/build/status/nathansupinski.codenebula)](https://dev.azure.com/codenebula-net/CodeNebula/_build/latest?definitionId=1)
+
 # Codenebula
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.

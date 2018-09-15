@@ -1,13 +1,21 @@
 {
   "name": "codenebula",
+  "private": true,
   "version": "0.0.0",
+  "description": "Codenebula.net development",
+  "main":"server.js",
+  "author": {
+    "name": "Nathan Supinski",
+    "email": "nathan@supinski.net"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+	"backendtest": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha tests/**/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +30,9 @@
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.2.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+	"express": "^4.13.3",
+    "mocha": "^3.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
@@ -43,6 +53,11 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~2.9.2"
+    "typescript": "~2.9.2",
+	"gulp": "^3.9.0",
+    "gulp-mocha": "^2.2.0",
+    "mocha-junit-reporter": "^1.12.0", 
+    "gulp-istanbul": "^1.1.3", 
+    "nyc": "^12.0.2"
   }
 }

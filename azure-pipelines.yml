@@ -7,13 +7,14 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
-  
+    displayName: 'Install Node.js'  
+	
 - script: |
+    npm install -g @angular/cli
     npm install
-    npm backendtest
-    ng build
     ng build --prod
-displayName: 'npm install and build'
+    npm testbackend
+   displayName: 'npm install and build'
 
 - task: PublishTestResults@2
   inputs:

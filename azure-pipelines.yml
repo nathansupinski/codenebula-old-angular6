@@ -13,8 +13,9 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
+    npm test
     ng build --prod
-    npm testbackend
+    
 
 - task: PublishTestResults@2
   inputs:

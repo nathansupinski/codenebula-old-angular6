@@ -3,6 +3,7 @@
 # edited for code nebula
 pool:
   vmImage: 'Ubuntu 16.04'
+  timeoutInMinutes: 15
   
 steps:
 - task: NodeTool@0
@@ -14,6 +15,7 @@ steps:
     npm install -g @angular/cli
     npm install
     ng build --prod
+    npm test
     
 
 - task: PublishTestResults@2

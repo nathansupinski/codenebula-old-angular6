@@ -15,10 +15,7 @@ steps:
     npm install
     ng build --prod
     npm test
-    pwd
-    ls -l
     
-
 - task: PublishTestResults@2
   inputs:
     testResultsFiles: '**/TEST-RESULTS.xml'
@@ -38,6 +35,6 @@ steps:
 # Publish build artifacts to Azure Artifacts/TFS
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
+    pathtoPublish: '$(System.DefaultWorkingDirectory)/dist'
     artifactName: 'distWebpack'
     

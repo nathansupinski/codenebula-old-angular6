@@ -2,7 +2,6 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript?view=vsts
 # edited for code nebula
 pool:
-  timeoutInMinutes: 15
   vmImage: 'Ubuntu 16.04'
   
 steps:

@@ -3,7 +3,7 @@
 # edited for code nebula
 pool:
   vmImage: 'Ubuntu 16.04'
-  timeoutInMinutes: 15
+  timeoutInMinutes: '15'
   
 steps:
 - task: NodeTool@0

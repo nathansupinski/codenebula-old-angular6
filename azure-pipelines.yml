@@ -41,6 +41,6 @@ steps:
 # Publish build artifacts to Azure Artifacts/TFS
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(System.DefaultWorkingDirectory)/deploy-frontend.js'
+    pathtoPublish: '$(System.DefaultWorkingDirectory)/deploy-frontend.sh'
     artifactName: 'deploy-frontend'
     

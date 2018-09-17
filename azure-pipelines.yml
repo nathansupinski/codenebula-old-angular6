@@ -38,3 +38,9 @@ steps:
     pathtoPublish: '$(System.DefaultWorkingDirectory)/dist'
     artifactName: 'distWebpack'
     
+# Publish build artifacts to Azure Artifacts/TFS
+- task: PublishBuildArtifacts@2
+  inputs:
+    pathtoPublish: '$(System.DefaultWorkingDirectory)/deploy-frontend.js'
+    artifactName: 'deploy-frontend'
+    

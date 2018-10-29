@@ -33,7 +33,14 @@
       <label for="email">Email</label>
       <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
       <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-        <div *ngIf="f.email.errors.required">Username is required</div>
+        <div *ngIf="f.email.errors.required">email is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="regCode">Registration Code</label>
+      <input type="text" formControlName="regCode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.regCode.errors }" />
+      <div *ngIf="submitted && f.regCode.errors" class="invalid-feedback">
+        <div *ngIf="f.regCode.errors.required">registration code is required</div>
       </div>
     </div>
     <div class="form-group">

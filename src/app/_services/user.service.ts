@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { User } from '../_models';
 
-export const config = {'apiUrl': 'https://codenebula.net/api'};
+export const config = {'apiUrl': 'https://www.codenebula.net/api'};
 //export const config = {'apiUrl': 'http://localhost:3000'};
 
 @Injectable()

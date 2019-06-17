@@ -1,19 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- main app container -->
 
-<div class="wrapper">
-  <nav id="sidebar">
-    <fa-icon icon="bars" style="float: right;"></fa-icon>
-    <ul>
-      <li>link 1</li>
-      <li>link 2</li>
-    </ul>
-  </nav>
   <div id="main-content">
+        <mat-toolbar color="primary">
+          <mat-toolbar-row class="codenebula-navbar-header-container">
+            <a href="/home" mat-button class="codenebula-navbar-title">CodeNebula</a>
+            <a href="/blog" mat-button class="codenebula-navbar-button-color">Blog</a>
+            <a href="/resume" mat-button>Resume</a>
+            <span class="codenebula-navbar-button-spacer"></span>
+            <a href="/about" mat-button>About</a>
+            <a href="/login" mat-button>Login</a>
+          </mat-toolbar-row>
+        </mat-toolbar>
+
         <alert></alert>
         <router-outlet></router-outlet>
   </div>
-</div>
+
 
 
 

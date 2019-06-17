@@ -3,9 +3,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+// import angular materials dependencies
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// import angular materials components
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 // import angular bootstrap component
-import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 //  import fontAwesome angular module and icon library helper.
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -23,13 +30,17 @@ import { routing } from './app.routing';
 import { AuthGuard } from './_guards';
 import { AlertService, AuthenticationService, UserService } from './_services';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+// angular components
+import { FormsModule } from '@angular/forms';
 // components
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_directives';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
-import { AppHomeCarouselBasic } from './homeCarousel';
+import { AboutComponent } from './about/about.component';
+import { ResumeComponent } from './resume/resume.component';
+import { BlogComponent } from './blog/blog.component';
 
 // used to create fake backend- uncomment below line to enable
 // import { fakeBackendProvider } from './_helpers';
@@ -40,8 +51,13 @@ import { AppHomeCarouselBasic } from './homeCarousel';
     ReactiveFormsModule,
     HttpClientModule,
     routing,
-    NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,
@@ -49,7 +65,9 @@ import { AppHomeCarouselBasic } from './homeCarousel';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    AppHomeCarouselBasic
+    AboutComponent,
+    ResumeComponent,
+    BlogComponent
   ],
   providers: [
     AuthGuard,

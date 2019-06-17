@@ -1,6 +1,22 @@
-﻿<div class="container">
+﻿<mat-sidenav-container class="example-container" >
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')" [fixedInViewport]="true" [fixedTopGap]="64">
+    Sidenav content
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-main-content">
+    <div>main content</div>
+    <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!--
+<div class="container">
   <div class="row">
-    <app-home-carousel-basic></app-home-carousel-basic>
     <div class="col">
       <h1>Hi {{currentUser.firstName}}!</h1>
       <p>You're logged in with Angular 6!!</p>
@@ -15,4 +31,7 @@
     </div>
   </div>
 </div>
+-->
+
+
 

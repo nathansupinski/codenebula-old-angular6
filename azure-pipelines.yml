@@ -37,7 +37,7 @@ steps:
 # Publish build artifacts to Azure Artifacts/TFS
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
+    pathtoPublish: '$(System.DefaultWorkingDirectory)/dist'
     artifactName: 'distWebpack'
     
 # Publish build artifacts to Azure Artifacts/TFS

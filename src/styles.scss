@@ -1,4 +1,13 @@
-@import "~@angular/material/prebuilt-themes/purple-green.css";
+//@import "~@angular/material/prebuilt-themes/purple-green.css";
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+@import "custom-theme-1.scss";
+
+.custom-theme-1{
+  @include angular-material-theme($custom-theme-1);
+}
 
 body{
   margin: 0;
@@ -29,7 +38,7 @@ body{
 }
 
 .sidenav-main-content{
-  height: 100vh;
+  height: calc(100vh - 64px) !important; //offset of 64px for the top banner
 }
 
 .example-events {
@@ -37,6 +46,20 @@ body{
   height: 200px;
   overflow: auto;
   border: 1px solid #555;
+}
+
+.home-parallax-container{
+  max-height: 960px;
+  margin: 0 auto;
+  font-size: 24px;
+  background-color: mat-color($custom-theme-1-primary);
+}
+
+.home-parallax{
+  background: url('src/assets/img/nebula1.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
 }
 
 

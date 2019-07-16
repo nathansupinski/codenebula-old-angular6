@@ -10,6 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatListModule} from '@angular/material/list';
 
 // import angular bootstrap component
 // import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -57,7 +58,8 @@ import { BlogComponent } from './blog/blog.component';
     MatButtonModule,
     MatSidenavModule,
     MatCheckboxModule,
-    FormsModule
+    FormsModule,
+    MatListModule
   ],
   declarations: [
     AppComponent,

@@ -9,6 +9,9 @@
   @include angular-material-theme($custom-theme-1);
 }
 
+$foreground: map-get($custom-theme-1, foreground);
+$background: map-get($custom-theme-1, background);
+
 body{
   margin: 0;
 }
@@ -48,19 +51,27 @@ body{
   border: 1px solid #555;
 }
 
+
+
 .home-parallax-container{
-  max-height: 960px;
+  height: 100%;
   margin: 0 auto;
   font-size: 24px;
-  background-color: mat-color($custom-theme-1-primary);
+  background-color: mat-color($background, card);
 }
 
-.home-parallax{
-  background: url('src/assets/img/nebula1.jpg') no-repeat center;
+.home-parallax-nebula1{
+  background: url('/assets/img/nebula2.jpg') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  height: 500px;
+  height: 400px;
 }
 
+.home-parallax-nebula2{
+  background: url('/assets/img/nebula3.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+}
 
 

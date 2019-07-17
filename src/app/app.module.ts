@@ -42,6 +42,7 @@ import { RegisterComponent } from './register';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { BlogComponent } from './blog/blog.component';
+import { ParallaxComponent } from './parallax/parallax.component';
 
 // used to create fake backend- uncomment below line to enable
 // import { fakeBackendProvider } from './_helpers';
@@ -69,7 +70,8 @@ import { BlogComponent } from './blog/blog.component';
     RegisterComponent,
     AboutComponent,
     ResumeComponent,
-    BlogComponent
+    BlogComponent,
+    ParallaxComponent
   ],
   providers: [
     AuthGuard,

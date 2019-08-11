@@ -3,17 +3,22 @@
                (closed)="events.push('close!')" [fixedInViewport]="true" [fixedTopGap]="64">
     Blogs
     <mat-nav-list>
-      <a mat-list-item href="..." *ngFor="let link of links"> {{ link }} </a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content class="sidenav-main-content">
-    <div>main content</div>
+    <!--<div>main content</div>
     <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
-    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
-    <p>Events:</p>
-    <div class="example-events">
-      <div *ngFor="let e of events">{{e}}</div>
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p> -->
+
+    <div>Editor data: {{markdownEditorData}}</div>
+    <br>
+    <div>Generated HTML: {{htmlContent}}</div>
+    <div id="markdown-editor-preview" [innerHTML]="htmlContent">
+
     </div>
+    <textarea id="markdown-editor" [(ngModel)]="markdownEditorData" (change)="editorChanged()">
+
+    </textarea>
   </mat-sidenav-content>
 </mat-sidenav-container>

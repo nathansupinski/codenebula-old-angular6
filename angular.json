@@ -23,10 +23,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/easymde/dist/easymde.min.css",
+              "./node_modules/codemirror/lib/codemirror.css"
             ],
             "scripts": [
-              "./node_modules/parallax-js/dist/parallax.min.js"
+              "./node_modules/parallax-js/dist/parallax.min.js",
+              "./node_modules/easymde/dist/easymde.min.js",
+              "./node_modules/codemirror/lib/codemirror.js",
+              "./node_modules/showdown/dist/showdown.min.js"
             ]
           },
           "configurations": {

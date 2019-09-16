@@ -11,4 +11,5 @@ phases:
       - ng build --configuration=$BUILD_ENV --build-optimizer
   post_build:
     commands:
-      - aws s3 sync dist/ s3://$BUCKET_NAME --delete
+      - aws s3 sync dist/ s3://$BUCKET_NAME --delete --exclude index.html
+      - aws s3 sync dist/ s3://$BUCKET_NAME --cache-control 'no-cache' --exclude "*" --include index.html
